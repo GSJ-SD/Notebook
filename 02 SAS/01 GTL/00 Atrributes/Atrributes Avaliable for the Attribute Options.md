@@ -63,7 +63,7 @@ ods graphics / antialias = off;
 ```
 - **THICKNESS = _style-reference_ | _dimension_ **
 	- 指定线条厚度。
-	- *style-reference*必须在*style-element-name:LINETHICKNESS*中指定LINETHICK属性。可参见[[Value Type Notation Used for GTL Statement Options#4 尺寸（dimension）]]。
+	- *style-reference*必须在*style-element-name:LINETHICKNESS*中指定LINETHICK属性。可参见[Value Type Notation Used for GTL Statement Options]()。
 
 ## 4 Marker Options
 使用以下一个或多个选项可以指定标记属性。options必须括在括号中，并指定为 *name* = *value*配对的空格分隔列表（space-delimited list）。
