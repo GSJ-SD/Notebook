@@ -1,7 +1,7 @@
 📗参考资料列表
 SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_017/grstatgraph/p0capvje7a9ntmn1gebwnjo1x89k.htm)
 📑前置学习：
-[[Value Type Notation Used for GTL Statement Options]]
+[Value Type Notation Used for GTL Statement Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Value%20Type%20Notation%20Used%20for%20GTL%20Statement%20Options.md)
 
 ## 1 图形组成（Components of a Graph）
 
@@ -22,7 +22,7 @@ SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentat
 	- 统称轴线（axis line），包括主刻度（major tick marks）和次刻度（minor tick marks）、主要刻度线值（major tick mark values）和轴标签（axis label）。 每个单元格都有一组由单元格中的所有绘图共享的轴。 在多单元格图中，如果单元格具有相同的数据类型，则单元格的列和行可以共享公共轴。
 - 脚注（footnote）
 	- 显示在图表中任何单元格或绘图区域下方的描述性文本。
-创建图形语句参见[[BEGINGRAPH Statement]]
+	创建图形语句参见[BEGINGRAPH Statement](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/BEGINGRAPH%20Statement.md)
 
 ## 2 图形布局（Graphical Layouts）
 GTL 最强大的功能之一是围绕称为“布局（layouts）”的分层语句块（hierarchical statement blocks）构建的语法。 最外面的布局块（layout blocks）决定：
@@ -96,7 +96,7 @@ LAYOUT LATTICE 语句通常用于创建跨列和行对齐的图的多单元布�
 GTL 中的图形根据不同的方式进行分类。 
 - 在布局块（layout blocks）中，绘图通常根据图形维度（graphical dimension）进行分类：是否以两个或三个视觉维度投影。 因此，GTL 中的图形通常根据其图形维度（graphical dimensions）而不是数据维度（data dimensions）被称为 2-D 或 3-D 图。
 - 关于输入数据（input data），图形依据从原始输入数据计算汇总统计量的语句（the statements that calculate summary statistics from raw input data）以及使用计算统计量作为图语句上的输入参数的语句（use calculated statistics as input parameters on the plot statement）进行分类。 ==因此，许多 GTL 绘图语句有两个版本：BARCHART 和 BARCARTPARM、HISTOGRAM 和 HISTOGRAMPARM，等等。 此类图之间的主要区别在于它们接受的输入数据的性质：==
-	- **“non-parm”版本**（例如，BARCHART）；根据未汇总的原始数据计算其值。例如，BARCHART计算图表中条形图所需的汇总值。这种绘图通常被称为“<font color=#ff0055>>计算绘图（computed plots）</font>”
+	- **“non-parm”版本**（例如，BARCHART）；根据未汇总的原始数据计算其值。例如，BARCHART计算图表中条形图所需的汇总值。这种绘图通常被称为“<font color=#ff0055>计算绘图（computed plots）</font>”
 	- **“parm”版本**（例如，BARCHARTPARM）；不汇总或计算输入数据的值，而是简单地呈现给定的输入数据。因此，输入数据必须预先汇总（pre-summarized）。“parm”版本的绘图，通常被称为“<font color=#ff0055>参数化绘图（parameterized plots）</font>”，产生与non-parm版本相同的结果。然而，它们不执行实现结果所需的计算或数据汇总。
 
 ## 4 轴（Axes）
@@ -169,8 +169,8 @@ run;
 - NOTES
 	- 提供有关图形定义的信息
 	- 用户自定义赋值
-示例：
-以下示例定义了一个名为 DYNAMICS 的模板，该模板可以为任何变量创建直方图和密度图。 它定义了宏变量和动态变量以供运行时替换。 模板中没有硬编码（hard code）任何数据相关信息。（可以使用 %LET 语句初始化宏变量，使用 SGRENDER 的 DYNAMIC 语句初始化动态变量。）
+	示例：
+	以下示例定义了一个名为 DYNAMICS 的模板，该模板可以为任何变量创建直方图和密度图。 它定义了宏变量和动态变量以供运行时替换。 模板中没有硬编码（hard code）任何数据相关信息。（可以使用 %LET 语句初始化宏变量，使用 SGRENDER 的 DYNAMIC 语句初始化动态变量。）
 ```SAS
 proc template;
  define statgraph dynamics;
@@ -206,8 +206,8 @@ run;
 	- if (condition) statement(s); endif;
 - IF/ELSE Block
 	- if (condition) statement(s); else statement(s); endif;
-在 IF 语句中，条件必须用括号括起来。条件（condition）可以是任何涉及算术（arithmetic）、逻辑运算符（logical operators）、比较运算符（comparison oparators）、布尔运算符（boolean operators）或串联运算符（concatenation operators）的标准 SAS 表达式。 该表达式还可以使用 SAS DATA 步骤函数。 <font color = #ff0000>表达式解析为单个数值，即 true 或 false</font>。
-在以下示例中，直方图有条件地与正态分布曲线、核密度估计分布曲线、两者或两者都不重叠：
+	在 IF 语句中，条件必须用括号括起来。条件（condition）可以是任何涉及算术（arithmetic）、逻辑运算符（logical operators）、比较运算符（comparison oparators）、布尔运算符（boolean operators）或串联运算符（concatenation operators）的标准 SAS 表达式。 该表达式还可以使用 SAS DATA 步骤函数。 <font color = #ff0000>表达式解析为单个数值，即 true 或 false</font>。
+	在以下示例中，直方图有条件地与正态分布曲线、核密度估计分布曲线、两者或两者都不重叠：
 ```SAS
 proc template;
   define statgraph conditional;     

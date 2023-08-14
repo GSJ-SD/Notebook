@@ -50,7 +50,7 @@ EVAL(MEAN(Time) + ACF(Time, Nlags=10))
 
 ## 6 填充图案（fill-pattern）
 将填充图案指定为两个字符的代码（two-character code），该代码由线条方向前缀（R表示右侧，L表示左侧，或X表示交叉填充）和线条标识号1–5组成。
-<font color = #0000ff>fill pattern options</font>参见[[Atrributes Avaliable for the Attribute Options#2 Fill Pattern Options]]。
+<font color = #0000ff>fill pattern options</font>参见[Atrributes Avaliable for the Attribute Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Atrributes%20Avaliable%20for%20the%20Attribute%20Options.md)。
 
 ## 7 输出格式（format）
 指定 SAS 格式或用户定义的格式。
@@ -61,11 +61,11 @@ EVAL(MEAN(Time) + ACF(Time, Nlags=10))
 
 ## 9 线型名称，线型编码（line-pattern name, line-pattern number）
 指定线条图案的字符串值、线条图案的数值、包含此类字符串或数字的动态变量，或者对line pattern的样式引用（style reference）。 选择线条图案是为了可辨别。 由于密度不同，相同粗细的线不可能具有相同的权重。 相反，线条图案被排序以提供权重的连续体，这在显示置信带时非常有用。
-<font color = #0000ff>line options</font>可参见[[Atrributes Avaliable for the Attribute Options#3 Line Options]]。
+<font color = #0000ff>line options</font>可参见[Atrributes Avaliable for the Attribute Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Atrributes%20Avaliable%20for%20the%20Attribute%20Options.md)。
 
 ## 10 标记名称（marker-name）
 指定标记符号的字符串值、包含标记符号的动态变量或对标记符号（marker symbol）的样式引用（style reference）。
-<font color = #0000ff>marker options</font>可参见[[Atrributes Avaliable for the Attribute Options#4 Marker Options]]。
+<font color = #0000ff>marker options</font>可参见[Atrributes Avaliable for the Attribute Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Atrributes%20Avaliable%20for%20the%20Attribute%20Options.md)。
 
 ## 11 数字，数字列（number, number-column）
 指定一个值、包含双精度值（double-precision value）的动态变量、解析为双精度值的表达式或对双精度值的样式引用（style reference）。 numeric-column 指定包含双精度值的列，或引用此类列的动态变量。
