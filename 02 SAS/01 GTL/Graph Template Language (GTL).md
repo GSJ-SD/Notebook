@@ -1,5 +1,5 @@
 📗参考资料列表
-SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_017/grstatgraph/p0capvje7a9ntmn1gebwnjo1x89k.htm)
+SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_017/grstatgraph/p0capvje7a9ntmn1gebwnjo1x89k.htm)  
 📑前置学习：
 [Value Type Notation Used for GTL Statement Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Value%20Type%20Notation%20Used%20for%20GTL%20Statement%20Options.md)
 
@@ -29,34 +29,26 @@ GTL 最强大的功能之一是围绕称为“布局（layouts）”的分层语
 - Graph的整体组织结构——无论是使用单单元格（single-cell）还是多单元格（multi-cell）显示。
 - 块中允许哪些语句（what statements are allowed in the block）。 通常，布局块可以包含绘图（plots）、文本行（lines of text）、图例（legend），甚至其他布局（another layout）。
 - 所包含的语句如何相互作用（how the contained statements interact）。
+相关笔记参见[[LAYOUT Overview]]。  
 ### 2.1 GTL中最外层的布局块（outermost layouts in GTL）
 - **OVERLAY**
 	- 用于在<font color = #ff0055>single-cell</font>中显示二维绘图的通用布局。
-	- 参见
 - **OVERLAY3D**
 	- 用于在<font color = #ff0055>single-cell</font>中显示 3D 绘图的布局。
-	- 参见
 - **OVERLAYEQUATED**
 	- 指定具有等轴（equated axes）的专用 OVERLAY。
-	- 参见
 - **REGION**
 	- 用于显示<font color = #ff0055>不使用轴</font>的<font color = #ff0055>single-cell</font>图形的通用布局。
-	- 参见
 - **GRIDDED**
 	- 绘图（plot）的基本网格。 所有cells都是独立的。
-	- 参见
 - **LATTICE**
 	- 高级的多单元布局（advanced multi-cell layout）。 轴可以跨列或行共享，也可以显示在网格外部。 具有许多网格标记和对齐功能。
-	- 参见
 - **DATALATTICE**
 	- 根据 1 或 2 个分类变量的值生成分类面板（classification panel）。
-	- 参见
 - **DATAPANEL**
 	- 根据 n 个分类变量的值生成分类面板。
-	- 参见
 - **GLOBALLEGEND**
 	- 指定用于创建包含多个离散图例的复合图例的布局。
-	- 参见
 ### 2.2 示例
 下图是使用 *LAYOUT LATTICE*语句作为布局中最外层模板生成的两单元图。
 
@@ -243,7 +235,7 @@ ODS GRAPHICS 语句用于修改图形模板的执行环境。 ODS GRAPHICS 语�
 - 是否启用ODS Graphics
 - 创建的图像（image）的的类型（type）和名称（name）
 - 图像的尺寸
-- 是否使用缩放（scaling）和抗锯齿（anti-aliasing）等功能
+- 是否使用缩放（scaling）和抗锯齿（anti-aliasing）等功能  
 以下 ODS GRAPHICS语句使用 HEIGHT= 和 WIDTH= 选项来设置输出图像的长宽比：
 ```SAS
 ods graphics on / height=175px width=200px;
@@ -279,15 +271,15 @@ filename odsout clear;
 
 ![Heat Map with STYLE=DAISY](https://documentation.sas.com/api/docsets/grstatgraph/v_002/content/images/ovdaisy.png?locale=en)
 
-对 ODS style的支持高度集成（highly integrated）到 GTL 语法中。默认情况下，大多数绘图和文本语句的图形外观特征（graphical appearance features）都映射（map）到相应的样式元素（style elements）和关联属性（associated attributes）。因此，您的输出表格和图表始终具有合理的整体外观。 此外，给定 ODS 目标的输出具有一致的外观（例如，表格颜色和图表颜色不冲突）。
+对 ODS style的支持高度集成（highly integrated）到 GTL 语法中。默认情况下，大多数绘图和文本语句的图形外观特征（graphical appearance features）都映射（map）到相应的样式元素（style elements）和关联属性（associated attributes）。因此，您的输出表格和图表始终具有合理的整体外观。 此外，给定 ODS 目标的输出具有一致的外观（例如，表格颜色和图表颜色不冲突）。  
 下图中的填充颜色由 ODS 样式中的样式元素 ThreeColorRamp 确定。以下代码显示ThreeColorRamp 样式元素的定义：
 ```SAS
 style ThreeColorRamp / endcolor = GraphColors("gramp3cend") neutralcolor = GraphColors("gramp3cneutral") startcolor = GraphColors("gramp3cstart");
 ```
-每种style的 ThreeColorRamp 颜色可能有所不同。
-示例1：style = htmlblue
+每种style的 ThreeColorRamp 颜色可能有所不同。  
+示例1：style = htmlblue  
 ![Heat Map with STYLE=HTMLBLUE](https://documentation.sas.com/api/docsets/grstatgraph/v_002/content/images/ovhtmlblue.png?locale=en)
 
-示例2：style = journal
+示例2：style = journal  
 ![Heat Map with STYLE=JOURNAL](https://documentation.sas.com/api/docsets/grstatgraph/v_002/content/images/ovjournal.png?locale=en)
 
