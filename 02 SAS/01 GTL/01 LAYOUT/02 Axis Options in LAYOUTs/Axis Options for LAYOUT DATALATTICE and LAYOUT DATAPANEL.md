@@ -122,11 +122,11 @@ ROW2AXISOPTS=(axis-options)
 - **LINEAROPTS=(_linear-axis-options_)**
 	- Specifies options for a standard numeric interval axis. 指定标准数字间隔轴的选项。
 	- 当axis type不是LINEAR时，此选项无效。
-	- 参见
+	- 参见[Options for Linear Axes Only](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/p1ug4om0rekm8vn1asfk7s8qb84g.htm#p0momyelq47gfan1uowz5van50vu)
 - **LOGOPTS=_(log-axis-options)_**
 	- Specifies options for a log axis. 指定对数轴的选项。
 	- 当axis type不是LOG时，此选项无效。
-	- 参见
+	- 参见[Options for Log Axes Only](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/p1ug4om0rekm8vn1asfk7s8qb84g.htm#p0nt9drslsknqvn117nv39h5uz7q)
 - **NAME="_string_"**
 	- Assigns a name to an axis for reference in other statements. 为轴指定名称以供其他语句中参考。
 	- restriction：此选项不支持由 DYNAMIC、MVAR 和 NMVAR 模板语句创建的变量。

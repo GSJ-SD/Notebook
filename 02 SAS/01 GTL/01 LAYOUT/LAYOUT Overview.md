@@ -37,5 +37,8 @@
 ## 4 图例布局（Legend Layout）
 - **GLOBALLEGEND**
 	- 1 cell for a legend
-	- 用于创建包含多个离散图例的复合图例的专用布局。
+	- 用于创建包含多个离散图例的复合图例的专用布局。 
+
+示意图：  
+![LAYOUTStatements](./assets/LAYOUTStatements.png)  
 
