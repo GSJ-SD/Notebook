@@ -1,4 +1,4 @@
-[SAS Help Center: LAYOUT DATALATTICE Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/p0rp226kgxokujn128n7sc7jrp24.htm)  
+📗[SAS Help Center: LAYOUT DATALATTICE Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/p0rp226kgxokujn128n7sc7jrp24.htm)   
 基于一个或两个分类变量和图形原型（graphical prototype）创建图形网格（a grid of graphs）。 默认情况下，为分类变量的每个可能组合创建原型（ptototype）的单独实例（一个data cell）。  
 ==Restriction==：只能在 LAYOUT DATALATTICE 块中指定一个 LAYOUT PROTOTYPE 块。 如果指定多个原型块（prototype blocks），则仅遵循指定的最后一个原型块。 其余原型块将被忽略。
 ==Requirement==：必须至少指定一个 ROWVAR= 选项或一个 COLUMNVAR= 选项。 也可以同时指定两者。
