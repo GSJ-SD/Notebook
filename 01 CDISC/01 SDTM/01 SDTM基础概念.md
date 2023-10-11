@@ -71,15 +71,19 @@ SDTM的数据结构可以在SAS V5 transport文件中展示，这是FDA和其他
 
 ##### 4.3.1 Subject Elements  
 描述了主题遍历的元素的实际顺序，以及每个元素的开始日期或开始日期和时间以及结束日期/时间。*Trial Design Model*中描述了*Planned elements*。由于实际数据并不总是遵循计划，SDTM允许对受试者的计划外因素进行描述（SEUPDES）。
+Domain：SE
 
 ##### 4.3.2 Subject Repro Stages  
-受试者再编程阶段（不用于人类临床试验）描述了受试者经历的再编程阶段的实际顺序，以及每个阶段的开始日期或开始日期和时间以及结束日期/时间。由于实际数据并不总是遵循计划，SDTM允许描述受试者的计划外再治疗阶段（SJUPDES）。  
+受试者再编程阶段（不用于人类临床试验）描述了受试者经历的再编程阶段的实际顺序，以及每个阶段的开始日期或开始日期和时间以及结束日期/时间。由于实际数据并不总是遵循计划，SDTM允许描述受试者的计划外再治疗阶段（SJUPDES）。
+Domain：SJ
 
 ##### 4.3.3 Subject Visits  
 受试者访视描述了每个受试者每次访视的实际开始和结束日期/时间。由于实际数据并不总是遵循计划，SDTM允许对受试者的计划外访视进行描述（SVUPDES）。  
+Domain：SV
 
 ##### 4.3.4 Subject Disease Milestones  
 受试者疾病里程碑旨在记录每个受试者确定的试验疾病里程碑的时间。  
+Domain：SM
 
 
 ## 5 Associated Persons Data  
@@ -115,6 +119,7 @@ Trial Arms 数据集将arms描述为trial elements的顺序，trial elements 在
 - Trial Elements  
 	- Trial Elements 描述了受试者在试验过程中经过的时间段（periods of times）。域代码为“TE”。
 	- Trial Elements - One record per Trial Element
+	- Domain：TE
 
 - Trial Arms  
 	- Trial Arms 描述试验中每个计划计划组别
@@ -122,12 +127,14 @@ Trial Arms 数据集将arms描述为trial elements的顺序，trial elements 在
 	- 为了适应复杂的试验设计，该数据集允许在有选择时从一个*element*分支到另一个*element*的规则，以及允许受试者跳到另一*element*而不是线性进行的过渡规则。
 	- 需注意：尽管同一*element*可能在一个*arm*中多次出现，但其每次出现时都将在TAETORD和EPOCH中有不同的取值，也可能在TABRANCH和TATRANS中有不同的取值。
 	- Trial Arms - One Record per Planned Element per Arm
+	- Domain：TA
 
 ##### 6.1.2 Trial Sets  
 
 - Trial Sets 允许提交有受试者计划分组（planned groups）的详细信息，这些信息是研究感兴趣的实验因素的组合（包括实验参数（experimental parameters）、固有特征（inherent characteristics）和申办方定义的属性（sponsor-defined atrributes））。
 - “Set” 可以是*arm*的计划细分（planned subdivision），也可以包括1个或多个*arm*。这些数据集对于确定不同研究之间的数据比较是否可行至关重要。
 - Trial Sets - One Record per Trial Set Parameter
+- Domain：TX
 
 ##### 6.1.3 Trial Repro Stages and Trial Repro Paths  
 
@@ -138,10 +145,12 @@ Reproductive Stages：生育阶段；生长阶段
 - Trial Repro Stages
 	- Trial Repro Stages使用stage描述，编码（code, short name）依据开始和结束的规则来描述研究中的unique的repro stages
 	- Trial Repro Stages - One Record per Planned Repro Stage
+	- Domain：TT
 
 - Trial Repro Paths  
 	- Trial Repro Paths 描述repro研究中的每个计划repro path，使用由每个repro path组成的有序的repro stages，和repro path中repro phase的规范以及应用于repro stage的repro phase的参考开始日期（reference start day of the repro phase applicable to the repro stage）
 	- Trial Repro Paths - One Record per Planned Repro Stage per Repro Path
+	- Domain：TP
 
 ##### 6.1.4 Trial Planned Data Collection  
 
@@ -150,6 +159,85 @@ Reproductive Stages：生育阶段；生长阶段
 	- Trial Visits描述试验中VISIT，VISITNUM，和VISITDY的允许取值或计划取值（随后用作收集的研究数据的timing variables），以及每个visit的开始和结束规则。
 	- 在大多数盲法试验中，所有arms中所有受试者的访视时间都是相同的。在每个arm的visits不同的情况下，每个arm每次visit都会有单独的记录。
 	- Trial Visits - One Record per Planned Trial Visit
+	- Domain：TV
 
 - Trial Disease Assessments  
-	- Trial Disease Assessments
+	- 当无法使用试验访视表达疾病评估时，试验疾病评估（Trial Disease Assessments）提供有关计划方案指定的疾病评估时间表的信息。
+	- 在肿瘤研究中，遵循disease-assessment schedule对减少评估时间偏倚（assessment time bias）的风险来说是必要的。TD域允许将计划的评估时间表与疗效评估的实际发生情况进行比较，以确定依从程度，从而可以评估基于SDTM的数据集的评估时间偏差。
+	- TD在肿瘤学之外的效用有限（实际上在肿瘤学研究中的效用也有限）。它是专门根据实体瘤反应评估标准（RECIST）开发的，特别是针对无进展生存期（PFS）终点的研究，其中评估时间偏差分析是合适的。
+	- Domain：TD
+
+- Trial Disease Milestones  
+	- Trial Disease Milestones用于描述在所研究的疾病过程中预期会发生的observations或activities，其时间是研究感兴趣的。
+	- Trial Disease Milestones - One Record per Disease Milestone Type
+	- Domain：TM
+
+##### 6.1.5 Trial Inclusion/Exclusion Criteria
+
+Trial Inclusion/Exclusion包含用于试验的每个纳入和排除标准的1条记录。如果入排标准在试验期间发生了变化，那么入排标准的每个版本都可能被展示。  
+
+- Trial Inclusion/Exclusion - One Record per Trial Inclusion or Exclusion Criteria
+- Domain：TI
+
+##### 6.1.6 Trial Summary Information 
+
+Trial Summary Information（试验概要信息）包含用于试验总结/摘要特征（summary characteristic）的一条记录。Trial Summary用于记录试验的基础信息，如试验阶段（trial phase），方案标题（protocol title），设计目标（design objectives）等。  
+
+- Trial Summary - One Record per Trial Summary Parameter  
+- Domain：TS
+
+##### 6.1.7 Challenge Agent Characterization  
+
+Challenge Agent Characterization（刺激剂特征）数据集允许申办方以结构化的格式提供试验中使用的刺激剂的信息。刺激剂特征数据集（AC）中的每个记录都包含一个参数（刺激剂的一个特征）和其取值。  
+
+### 6.2 Study Reference  
+
+有时需要创建将在受试者数据中使用的study-specific identifiers。目前为止，已经确定两种这样的情况：
+
+- Identifiers for Device 用于器械的标识符
+- Identifiers for non-host organisms 用于非宿主生物的标识符  
+
+##### 6.2.1 Device Identifiers Dataset  
+
+Device的标识（identity）是通过一系列参数建立的，然后为其分配一个标识符（identifier）。用于识别device的参数取决于device的类型和在device间进行区分的研究需要。
+
+- Device Identifiers Dataset：DI
+
+![cocept map1](./assets/RelationshipsBetweenDeviceIdentifierVariables.png)  
+
+##### 6.2.2 Non-host Organism Identifiers Dataset  
+
+non-host organism（非宿主生物）的身份是通过一系列分类群（*taxa*，用于对生物进行分类）来确定的，然后为其分配一个标识符。用于识别non-host organism的分类群取决于生物的类别和区分生物的研究需要。  
+
+- Non-host Organism Identifiers Dataset：OI  
+
+![Concept map2](./assets/RelationshipsBetweenNon-hostOrganismIdentifierVariables.png)  
+
+
+## 7 Datasets for Representing Relationships  
+
+在许多情况下，有必要或希望展现数据集或记录之间的关系。SDTM包括以下的关系数据集（relationship datasets）：
+
+- Related Records Dataset，用于标识两种类型的relationships：
+	- 受试者的独立记录（通常在不同的数据集中）之间的关系（例如，用于治疗某个不良事件的合并用药）
+	- 两个或多个数据集之间的关系，其中1个或多个数据集的记录域另1个或几个数据集中的记录相关。  
+
+- Supplemental Qualifiers Dataset 补充限定符数据集
+	- 表示依赖关系，不能由general-observation类的数据集的一个或多个记录中的标准变量（standard variable）表示的数据可以关联回该记录。
+	- Domain：SUPP--
+
+- Pool Definition Dataset 
+	- 表示一个受试者与一组受试者之间的关系。  
+
+- Related Subjects Dataset  
+	- 表示除pool中的成员之外的研究受试者之间的关系。
+
+- Associated Persons Relationships Dataset  
+	- 表示相关人员（associated person）和研究对象之间的关系。  
+
+- Device-subject Relationships Dataset  
+	- 表示device与研究受试者之间的关系。  
+	- Domain：DR
+
+- Related Specimens Dataset  
+	- 表示采集的样本和从中提取的样本之间的关系。  

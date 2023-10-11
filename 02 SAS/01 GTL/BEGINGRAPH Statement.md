@@ -1,9 +1,10 @@
-[SAS Help Center: BEGINGRAPH Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/n0j696v6yqkb79n12zed3am3omcx.htm)
-定义使用 GTL 语句定义的图形模板的最外层container。 
-要求：
-- 所有 STATGRAPH 模板定义必须以 BEGINGRAPH 语句开头并以 ENDGRAPH 语句结束。
-- BEGINGRAPH 块必须包含一个且仅一个布局模块（layout block）。 
-- 布局模块及其嵌套布局（如果有）必须至少包含一个绘图（plot）。
+[SAS Help Center: BEGINGRAPH Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/n0j696v6yqkb79n12zed3am3omcx.htm)    
+
+定义使用 GTL 语句定义的图形模板的最外层container。   
+要求：  
+- 所有 STATGRAPH 模板定义必须以 BEGINGRAPH 语句开头并以 ENDGRAPH 语句结束。  
+- BEGINGRAPH 块必须包含一个且仅一个布局模块（layout block）。   
+- 布局模块及其嵌套布局（如果有）必须至少包含一个绘图（plot）。  
 
 ## 1 语法（Syntax）
 ```SAS
