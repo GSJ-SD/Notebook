@@ -244,7 +244,7 @@ proc sql outobs=12;
     order by density desc;
 ```
 
-##### 1.4.5 Sorting bu Column Position  
+##### 1.4.5 Sorting by Column Position  
 可以通过指定其数字位置来对 SELECT 子句中的任何列进行排序。通过指定位置而不是名称，可以按没有别名的计算列进行排序。  
 ```SAS
 proc sql outobs=12;
@@ -399,7 +399,7 @@ Truncated string comparison operators用于比较两个字符串。与传统比�
 	not equal to truncated strings  
 	example: `where style net 'TWO'`  
 
-示例：  
+示例1：  
 ```SAS
 proc sql;
     title '';
@@ -407,6 +407,16 @@ proc sql;
         from sql.unitedstates
         where name eqt 'New ';
 ```
+
+示例2：
+```SAS
+proc sql;
+    select USUBJID from adam.adsl
+    where USUBJID eqt "S0100";
+quit;
+```  
+结果如下：
+![example1](./assets/sql_eqt_example1.png)  
 
 ### 1.6 Summarizing Data  
 可以使用*aggregate function*（或summary function）生成表中数据的统计汇总。aggregate function指示 PROC SQL 如何组合一列或多列中的数据。如果指定一列作为aggregate function的参数，则会计算该列中的值。如果指定多个参数，则会计算列出的参数或列。  

@@ -23,6 +23,7 @@ GTL语句中可使用的属性选项（attribute option），包括*fill-color o
 	- 指定填充样式。
 	- *style-reference*从SAS 9.4M5开始有效。它必须在*style-element-name:FILLPATTERN*中指定FILLPATTERN属性。如果未在活动ODS style中定义*style-reference*，则会忽略PATTERN=选项，并使用默认填充样式。
 	- *fill-pattern*是一个由两个字符组成的代码，包含一个线条方向前缀（R表示右侧，L表示左侧，X表示交叉填充）和一个线条标识号1–5。下表显示了每种可能组合的模式。
+
 |Pattern Name|Example|Pattern Name|Example|Pattern Name|Example|
 |---|---|---|---|---|---|
 |L1|![L1 fill pattern](https://documentation.sas.com/api/docsets/grstatgraph/v_001/content/images/odsg_fillpattern_l1.svg?locale=en)|R1|![R1 fill pattern](https://documentation.sas.com/api/docsets/grstatgraph/v_001/content/images/odsg_fillpattern_r1.svg?locale=en)|X1|![X1 fill pattern](https://documentation.sas.com/api/docsets/grstatgraph/v_001/content/images/odsg_fillpattern_x1.svg?locale=en)|
@@ -40,6 +41,7 @@ GTL语句中可使用的属性选项（attribute option），包括*fill-color o
 - **PATTERN = _style-reference_ | _line-pattern-name_ | _line-pattern-number_ **
 	- 指定线型。
 	- *style reference*必须在*style-element:LINESTYLE*中指定LineStyle属性。线型图案可以指定为图案名称或图案编号。下表列出了常用的线型。
+
 | Pattern Number | Pattern Name        | Example                                                                                                                                                |
 | -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1              | Solid               | ![Line pattern Solid](https://documentation.sas.com/api/docsets/grstatproc/3.2/content/images/odsg_lp_solid.png?locale=en)                             |
@@ -78,6 +80,7 @@ ods graphics / antialias = off;
 - **SYMBOL = _style-reference_ | _marker-name_**
 	- 指定标记的名称。
 	- *style-reference*必须在*style-element-name:MARKERSYMBOL*中指定MARKERSYMBOL属性。下表列出了SAS支持的符号。
+
 | Symbol Name    | Plot Symbol                                                                                                                                          | Symbol Name         | Plot Symbol                                                                                                                                                    |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ArrowDown      | ![ArrowDown marker symbol](https://documentation.sas.com/api/docsets/grstatgraph/v_001/content/images/odsg_marker_arrowdown.png?locale=en)           | StarFilled          | ![StarFilled marker symbol](https://documentation.sas.com/api/docsets/grstatgraph/v_001/content/images/odsg_marker_starfilled.png?locale=en)                   |

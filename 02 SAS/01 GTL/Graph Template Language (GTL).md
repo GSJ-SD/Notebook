@@ -272,10 +272,11 @@ filename odsout clear;
 ![Heat Map with STYLE=DAISY](https://documentation.sas.com/api/docsets/grstatgraph/v_002/content/images/ovdaisy.png?locale=en)
 
 对 ODS style的支持高度集成（highly integrated）到 GTL 语法中。默认情况下，大多数绘图和文本语句的图形外观特征（graphical appearance features）都映射（map）到相应的样式元素（style elements）和关联属性（associated attributes）。因此，您的输出表格和图表始终具有合理的整体外观。 此外，给定 ODS 目标的输出具有一致的外观（例如，表格颜色和图表颜色不冲突）。  
-下图中的填充颜色由 ODS 样式中的样式元素 ThreeColorRamp 确定。以下代码显示ThreeColorRamp 样式元素的定义：
+下图中的填充颜色由 ODS 样式中的样式元素 ThreeColorRamp 确定。以下代码显示ThreeColorRamp 样式元素的定义：  
 ```SAS
 style ThreeColorRamp / endcolor = GraphColors("gramp3cend") neutralcolor = GraphColors("gramp3cneutral") startcolor = GraphColors("gramp3cstart");
 ```
+
 每种style的 ThreeColorRamp 颜色可能有所不同。  
 示例1：style = htmlblue  
 ![Heat Map with STYLE=HTMLBLUE](https://documentation.sas.com/api/docsets/grstatgraph/v_002/content/images/ovhtmlblue.png?locale=en)
