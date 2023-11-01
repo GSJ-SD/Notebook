@@ -1,3 +1,4 @@
+
 📗[SAS Help Center: LAYOUT PROTOTYPE Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/n1w8znrw5p8g39n1xvg4qfv7mstv.htm)  
 由一个或多个*plot-statements*中构建一个复合图形，将该复合图形用作原型（prototype）或“_rubber stamp_”，在父级的 DATALATTICE 或 DATAPANEL 布局的每个单元中重复。  
 - restrictions

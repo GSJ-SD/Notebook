@@ -1,3 +1,4 @@
+
 📗[SAS Help Center: LAYOUT GRIDDED Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/p1h7wd5z8ihewzn1vy7htk5tu7nr.htm)  
 将嵌套 GTL 语句的结果组装到网格中，网格中可能会省略空单元格。  
 

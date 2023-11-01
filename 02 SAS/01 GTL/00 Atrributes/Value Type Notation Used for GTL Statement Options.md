@@ -1,7 +1,8 @@
 
 *Value Type Notation Used for GTL Statement Options*：用于GTL语句选项的值类型表示法
 ## 1 布尔值（boolean）
-布尔值（*boolean*）：指定解析为true或false的文字值。
+布尔值（*boolean*）：指定解析为true或false的文字值。  
+
 | Values That Resolve To True | Values That Resolve to False |
 | --------------------------- | ---------------------------- |
 | ON                          | OFF                          |
@@ -28,7 +29,8 @@
 
 ## 4 尺寸（dimension）
 [SAS Help Center: Units of Measurement](https://documentation.sas.com/doc/en/vdmmlcdc/8.11/grstatproc/p0sgbhvieekj9cn1wog7owbtguo9.htm)
-指定一个非负数（nonnegative number）。数字后面可以跟以下可选计量单位之一：
+指定一个非负数（nonnegative number）。数字后面可以跟以下可选计量单位之一：  
+
 | unit     | Description                   | 中文                   |
 | -------- | ----------------------------- | ---------------------- |
 | CM       | centimeters                   | 厘米                   |

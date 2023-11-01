@@ -1,7 +1,8 @@
+
 📗参考资料列表
 SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_017/grstatgraph/p0capvje7a9ntmn1gebwnjo1x89k.htm)  
 📑前置学习：
-[Value Type Notation Used for GTL Statement Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Value%20Type%20Notation%20Used%20for%20GTL%20Statement%20Options.md)
+[Value Type Notation Used for GTL Statement Options](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/00%20Atrributes/Value%20Type%20Notation%20Used%20for%20GTL%20Statement%20Options.md)  
 
 ## 1 图形组成（Components of a Graph）
 
@@ -22,7 +23,7 @@ SAS Help Center：[SAS Help Center: REGRESSIONPLOT Statement](https://documentat
 	- 统称轴线（axis line），包括主刻度（major tick marks）和次刻度（minor tick marks）、主要刻度线值（major tick mark values）和轴标签（axis label）。 每个单元格都有一组由单元格中的所有绘图共享的轴。 在多单元格图中，如果单元格具有相同的数据类型，则单元格的列和行可以共享公共轴。
 - 脚注（footnote）
 	- 显示在图表中任何单元格或绘图区域下方的描述性文本。
-	创建图形语句参见[BEGINGRAPH Statement](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/BEGINGRAPH%20Statement.md)
+	创建图形语句参见[BEGINGRAPH Statement](https://github.com/GSJ-SD/Notebook/blob/main/02%20SAS/01%20GTL/BEGINGRAPH%20Statement.md)  
 
 ## 2 图形布局（Graphical Layouts）
 GTL 最强大的功能之一是围绕称为“布局（layouts）”的分层语句块（hierarchical statement blocks）构建的语法。 最外面的布局块（layout blocks）决定：
@@ -49,6 +50,7 @@ GTL 最强大的功能之一是围绕称为“布局（layouts）”的分层语
 	- 根据 n 个分类变量的值生成分类面板。
 - **GLOBALLEGEND**
 	- 指定用于创建包含多个离散图例的复合图例的布局。
+
 ### 2.2 示例
 下图是使用 *LAYOUT LATTICE*语句作为布局中最外层模板生成的两单元图。
 

@@ -1,10 +1,13 @@
+
 OVERLAYEQUATED 布局中绘图的轴选项通过 LAYOUT OVERLAYEQUATED 语句上的以下选项指定：  
-- **COMMONAXISOPTS=_(common-equated-axis-options)_**
-- **XAXISOPTS=_(equated-axis-options)_**
+- **COMMONAXISOPTS=_(common-equated-axis-options)_**  
+- **XAXISOPTS=_(equated-axis-options)_**  
 - **YAXISOPTS=_(equated-axis-options)_**  
 
 ## 1 Options That Apply to Both Equated Axes  
+
 本节中记录的选项使用 COMMONAXISOPTS= 选项指定，并应用于 X 轴和 Y 轴。除 VIEWMAX 和 VIEWMIN 之外，其余选项均不能使用 XAXISOPTS= 或 YAXISOPTS= 选项单独应用于 X 或 Y 轴。  
+
 - **INTEGER=TRUE | FALSE**  
 	- 指定将均匀间隔的整数值用于刻度线。  
 	- default：FALSE
@@ -52,6 +55,7 @@ OVERLAYEQUATED 布局中绘图的轴选项通过 LAYOUT OVERLAYEQUATED 语句上
 	- default：X轴和Y轴数据的最小值。  
 
 ## 2 Options That Apply Separately to an X or Y Equated Axis  
+
 |Equated Axis Option|Description|
 |---|---|
 |[DISPLAY](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/n05pxh1t9z177mn16dkhotuweqmv.htm#n1rfjuuygjjhzjn1fvmrbr80q94dc)|Controls which axis features are displayed on the primary axis.|

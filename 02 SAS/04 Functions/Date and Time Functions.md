@@ -1,3 +1,4 @@
+
 ### INTNX  
 - 返回经过指定数量的间隔后的日期。  
 - 语法：`INTNX('interval', start-date, increment<, 'alignment'>)`  

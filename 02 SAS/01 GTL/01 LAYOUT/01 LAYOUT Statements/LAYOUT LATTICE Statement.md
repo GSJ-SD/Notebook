@@ -1,3 +1,4 @@
+
 📗[SAS Help Center: LAYOUT LATTICE Statement](https://documentation.sas.com/doc/en/pgmsascdc/v_041/grstatgraph/n0n10xwfn3h4hnn10v5joeerd9m8.htm)  
 创建图形网格，自动对齐绘图区域并在网格单元格上勾选显示区域，以方便图形之间的数据比较。空单元格可能会从网格中省略。  
 

@@ -1,3 +1,4 @@
+
 ### SYSGET   
 - 返回指定的操作环境变量的值。  
 - 语法：`SYSGET(operating-environment-variable)`  

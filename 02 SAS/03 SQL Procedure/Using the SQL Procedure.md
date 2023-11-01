@@ -1,40 +1,41 @@
-SQL 过程是结构化查询语言（Structured Query Language）的基本 SAS 实现。PROC SQL 是 Base SAS 软件的一部分，可以将其与任何 SAS 数据集（表）一起使用。通常，PROC SQL 可以替代其他 SAS 过程或 DATA 步骤。可以将 SAS 语言元素（例如全局语句、数据集选项、函数、信息和格式）与 PROC SQL 一起使用，就像使用其他 SAS 过程一样。PROC SQL 使您能够执行以下任务：
-- generate reports
-- generate summary statistics
-- retrieve(取出) data from tables or views
-- combine data from tables or views
-- create tables, views, and indexes
-- update the data values in PROC SQL tables
-- update and retrieve data from database management system (DBMS) tables
-- modify a PROC SQL table by adding, modifying, or dropping columns  
+
+SQL 过程是结构化查询语言（Structured Query Language）的基本 SAS 实现。PROC SQL 是 Base SAS 软件的一部分，可以将其与任何 SAS 数据集（表）一起使用。通常，PROC SQL 可以替代其他 SAS 过程或 DATA 步骤。可以将 SAS 语言元素（例如全局语句、数据集选项、函数、信息和格式）与 PROC SQL 一起使用，就像使用其他 SAS 过程一样。PROC SQL 使您能够执行以下任务：  
+- generate reports  
+- generate summary statistics  
+- retrieve(取出) data from tables or views  
+- combine data from tables or views  
+- create tables, views, and indexes  
+- update the data values in PROC SQL tables  
+- update and retrieve data from database management system (DBMS) tables  
+- modify a PROC SQL table by adding, modifying, or dropping columns    
 
 PROC SQL 可以在交互式 SAS 会话或批处理程序中使用，并且可以包含全局语句，例如 TITLE 和 OPTIONS。  
 
-根据 SQL 的 ANSI 标准，缺失值称为空值（null value）。它与空白值（blank value）或零值（zero value）不同。但是，为了与 SAS 的其余部分兼容，PROC SQL 将缺失值视为空白或零值，并将这三个值都视为空值（null value）。
+根据 SQL 的 ANSI 标准，缺失值称为空值（null value）。它与空白值（blank value）或零值（zero value）不同。但是，为了与 SAS 的其余部分兼容，PROC SQL 将缺失值视为空白或零值，并将这三个值都视为空值（null value）。 
 
 ## 1 Retrieving Data from a Single Table  
-### 1.1 Overview of the SELECT Statement  
+### 1.1 Overview of the SELECT Statement   
 本章向您展示如何执行以下任务：  
-- 使用 SELECT 语句从单个表中检索数据
-- 使用 VALIDATE 语句验证 SELECT 语句的正确性  
+- 使用 SELECT 语句从单个表中检索数据  
+- 使用 VALIDATE 语句验证 SELECT 语句的正确性    
 
-SELECT 语句是 PROC SQL 的主要工具。可以使用它来识别、检索和操作表中的数据列，还可以在 SELECT 语句中使用多个可选子句来对查询进行限制。
+SELECT 语句是 PROC SQL 的主要工具。可以使用它来识别、检索和操作表中的数据列，还可以在 SELECT 语句中使用多个可选子句来对查询进行限制。  
 
-- 🔵<font color=#4857CB>SELECT and FROM Clauses</font>
-	SELECT 语句必须包含 SELECT 子句和 FROM 子句，这两个子句在 PROC SQL 查询中都是必需的。
-- 🔵<font color=#4857CB>WHERE Clause</font>
-	WHERE 子句使您能够通过指定表的每一行必须满足的条件来限制检索的数据。PROC SQL 仅输出包含满足条件的行。
+- 🔵<font color=#4857CB>SELECT and FROM Clauses</font>  
+	SELECT 语句必须包含 SELECT 子句和 FROM 子句，这两个子句在 PROC SQL 查询中都是必需的。  
+- 🔵<font color=#4857CB>WHERE Clause</font>  
+	WHERE 子句使您能够通过指定表的每一行必须满足的条件来限制检索的数据。PROC SQL 仅输出包含满足条件的行。  
 	```SAS
 	select name
 	  from sql.countries
 	  where Population gt 5000000;
 	```
-- 🔵<font color=#4857CB>ORDER BY Clause</font>
-	ORDER BY 子句能够按一列或多列对表的输出进行排序。也就是说，可以按字母升序或降序排列字符值，也可以按升序或降序排列数字值。默认顺序是升序。
-- 🔵<font color=#4857CB>GROUP BY Clause</font>
-	GROUP BY 子句能够将查询结果分解为行的子集。使用 GROUP BY 子句时，可以在 SELECT 子句或 HAVING 子句中使用聚合函数（aggregate functions）来指示 PROC SQL 如何对数据进行分组。PROC SQL 分别计算每个组的聚合函数。当不使用聚合函数时，PROC SQL 会将 GROUP BY 子句视为 ORDER BY 子句，并且任何聚合函数都将应用于整个表。
-- 🔵<font color=#4857CB>HAVING Clause</font>
-	HAVING 子句与 GROUP BY 子句配合使用，可根据给定条件限制查询结果中的组。PROC SQL 在对数据进行分组并应用聚合函数后应用 HAVING 条件。
+- 🔵<font color=#4857CB>ORDER BY Clause</font>  
+	ORDER BY 子句能够按一列或多列对表的输出进行排序。也就是说，可以按字母升序或降序排列字符值，也可以按升序或降序排列数字值。默认顺序是升序。  
+- 🔵<font color=#4857CB>GROUP BY Clause</font>  
+	GROUP BY 子句能够将查询结果分解为行的子集。使用 GROUP BY 子句时，可以在 SELECT 子句或 HAVING 子句中使用聚合函数（aggregate functions）来指示 PROC SQL 如何对数据进行分组。PROC SQL 分别计算每个组的聚合函数。当不使用聚合函数时，PROC SQL 会将 GROUP BY 子句视为 ORDER BY 子句，并且任何聚合函数都将应用于整个表。  
+- 🔵<font color=#4857CB>HAVING Clause</font>  
+	HAVING 子句与 GROUP BY 子句配合使用，可根据给定条件限制查询结果中的组。PROC SQL 在对数据进行分组并应用聚合函数后应用 HAVING 条件。  
 	```SAS
 	Select Continent, sum(Population)
 	  from sql.countries
@@ -43,13 +44,13 @@ SELECT 语句是 PROC SQL 的主要工具。可以使用它来识别、检索和
 	  order by Continent;
 	```
 
-构建SELECT语句时，必须按照以下顺序指定子句：
-1. SELECT
-2. FROM
-3. WHERE
-4. GROUP BY
-5. HAVING
-6. ORDER BY  
+构建SELECT语句时，必须按照以下顺序指定子句：  
+1. SELECT  
+2. FROM  
+3. WHERE  
+4. GROUP BY  
+5. HAVING  
+6. ORDER BY   
 
 ### 1.2 Selecting Columns in a Table  
 ##### 1.2.1 Selecting All Columns in a Table  
@@ -80,7 +81,7 @@ proc sql;
     from sql.unitedstates;
 ```
 
-##### 1.2.4 Determining the Structure of a Table  
+##### 1.2.4 Determining the Structure of a Table   
 要获取表中所有列及其属性的列表，可以使用 DESCRIBE TABLE 语句。  
 ```SAS
 proc sql;
@@ -109,7 +110,7 @@ proc sql outobs=12;
     from sql.postalcodes;
 ```
 
-要防止打印列标题“Name”和“Code”，可以为每列分配一个以特殊字符开头的标签。 PROC SQL 在分配标签时不写入列名，也不写入以特殊字符开头的标签。例如，可以使用以下查询来隐藏 PROC SQL 在上一个示例中显示的列标题：
+要防止打印列标题“Name”和“Code”，可以为每列分配一个以特殊字符开头的标签。 PROC SQL 在分配标签时不写入列名，也不写入以特殊字符开头的标签。例如，可以使用以下查询来隐藏 PROC SQL 在上一个示例中显示的列标题：  
 ```SAS
 proc sql outobs=12;
   title '';
@@ -126,8 +127,8 @@ proc sql outobs=12;
     from sql.worldtemps;
 ```
 
-##### 1.3.3 Assigning a Column Alias  
-通过指定列别名，可以为 PROC SQL 查询中的任何列分配新名称。新名称必须遵循 SAS 名称规则。 该名称仅针对该查询保留。 当您使用别名来命名列时，您可以在稍后的查询中使用别名来引用该列。
+##### 1.3.3 Assigning a Column Alias   
+通过指定列别名，可以为 PROC SQL 查询中的任何列分配新名称。新名称必须遵循 SAS 名称规则。 该名称仅针对该查询保留。 当您使用别名来命名列时，您可以在稍后的查询中使用别名来引用该列。 
 ```SAS
 proc sql outobs=12;
   title '';
@@ -188,10 +189,10 @@ proc sql;
 
 ##### 1.3.8 Specifying Column Attributes  
 可以指定以下列属性，这些属性决定 SAS 数据的显示方式：  
-- FORMAT=
-- INFORMAT=
-- LABEL=
-- LENGTH=
+- FORMAT=  
+- INFORMAT=  
+- LABEL=  
+- LENGTH=  
 ```SAS
 proc sql outobs=12;
   title '';
@@ -297,22 +298,22 @@ proc sql outobs=12;
 
 ##### 1.5.2 Retrieving Rows Based on a Comparison  
 可以在 WHERE 子句中使用比较运算符来选择不同的数据子集。下述列出了可以使用的比较运算符：
-- = | EQ
+- = | EQ  
 	equal to  
 	example: `where name='Asia';`  
-- ^= | ~= | ¬= | <> | NE
+- ^= | ~= | ¬= | <> | NE  
 	not equal to  
 	example: `where name ne 'Africa';`  
-- > | GT
+- > | GT  
 	greater than  
 	example: `where area>10000;`  
-- < | LT
+- < | LT  
 	less than  
 	example: `where Depth<5000;`  
-- >= | GE
+- >= | GE  
 	greater than or equal to  
 	example: `where Statehood>='01jan1860'd;`   
-- <= | LE
+- <= | LE  
 	less than or equal to  
 	example: `where population<=5000000;`  
 
@@ -328,13 +329,13 @@ proc sql;
 
 ##### 1.5.3 Retrieving Rows That Satisfy Multiple Conditions  
 可以使用逻辑运算符或布尔运算符来构造包含两个或多个表达式的 WHERE 子句。下述列出了可以使用的逻辑运算符：  
-- & | AND
-	specifies that both the previous and following conditions must be true  
-	example: `continent='Asia' and population>5000000`  
-- ! or | or ¦ or OR
+- & | AND  
+	specifies that both the previous and following conditions must be true    
+	example: `continent='Asia' and population>5000000`    
+- ! or | or ¦ or OR  
 	specifies that either the previous or the following condition must be true  
 	example: `population<1000000 or population>5000000`  
-- ^ or ~ or ¬ or NOT
+- ^ or ~ or ¬ or NOT  
 	specifies that the following condition must be false  
 	example: `continent not 'Africa'`  
 
@@ -350,13 +351,13 @@ proc sql;
 
 ##### 1.5.4 Using Other Conditional Operators  
 可以在 WHERE 子句中使用许多不同的条件运算符。下述列出了您可以使用的其他运算符：  
-- ANY
+- ANY  
 	指定从子查询获得的一组值中至少有一个必须满足给定条件  
 	example: `where population>any(select population from sql.countries)`  
-- ALL
+- ALL  
 	指定从子查询获得的所有值必须满足给定条件  
 	example: `where population>all(select population from sql.countries)`  
-- BETWEEN-AND  
+- BETWEEN-AND    
 	tests for balues within an inclusive range  
 	example: `where population between 1000000 and 5000000`  
 - CONTAINS
