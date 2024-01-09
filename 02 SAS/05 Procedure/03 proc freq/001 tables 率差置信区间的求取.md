@@ -11,7 +11,7 @@
 - exact unconditional  
 - Hauck-Anderson  
 - Miettinen-Nurminen (score)  
-- Newcombe(注意：在率均为0%或均为100%时SAS无法计算风险差值及其95%CI，但 Newcombe-wilson方法其实是可以计算的，详见[[2023-12-20 有效率为0%或100%时置信区间的计算]])  
+- Newcombe(注意：在率均为0%或均为100%时SAS无法计算风险差值及其95%CI，但 Newcombe-wilson方法其实是可以计算的，详见[[2023-12-20 有效率差为0%或100%时置信区间的计算]])  
 - Wald  
 - Continuity-corrected Newcombe  
 - Continuity-corrected Wald  
