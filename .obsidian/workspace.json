@@ -1,0 +1,176 @@
+{
+  "main": {
+    "id": "d56facc69e44e0b2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6537c76983dfbe6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7a490003503c166b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 SAS/01 Diary/2024/2024-05-17 REG对斜率是否为1进行检验.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f52608c7da444f98",
+    "type": "split",
+    "children": [
+      {
+        "id": "266dea19d10e22ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62321df91f8a5b77",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5aa6e23d03c7f743",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e2dd8d4cc484ec3a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fdd3485ddfbe08b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "20b805deb7a47d1b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1638328bba395e8f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02 SAS/01 Diary/2024/2024-05-17 REG对斜率是否为1进行检验.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4cfbcc1a37534f94",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02 SAS/01 Diary/2024/2024-05-17 REG对斜率是否为1进行检验.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6f01673ff62b46b4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "4697bb61e4b224be",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02 SAS/01 Diary/2024/2024-05-17 REG对斜率是否为1进行检验.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "7a490003503c166b",
+  "lastOpenFiles": [
+    "02 SAS/01 Diary/2024/2024-05-08 获取某年某月的最后一个日期.md",
+    "02 SAS/01 Diary/2024/2024-04-16 SAS输出图形到RTF中，他人查看字体显示为方框.md",
+    "02 SAS/01 Diary/2024/2024-01-09 SQL创建数据集时添加顺序编号.md",
+    "02 SAS/01 Diary/2024/2024-01-09 提取日期时间值中的日期和时间部分的函数.md",
+    "02 SAS/01 Diary/2023/2023-11-02 复制逻辑库后，“输出格式没有找到或无法加载”的问题解决.md",
+    "02 SAS/01 Diary/2023/2023-10-25 卡方检验与Fisher检验应用条件的判定及warning导出.md",
+    "02 SAS/01 Diary/2023/2023-10-16 SORT排序中文本型数字排序问题.md",
+    "02 SAS/01 Diary/2023/2023-10-16 SORT排序中的locale选项.md",
+    "02 SAS/01 Diary/2023/2023-10-11 RTF语法中的unicode字符.md",
+    "02 SAS/01 Diary/2024/2024-05-17 REG对斜率是否为1进行检验.md",
+    "02 SAS/01 Diary/2024/assets/2024-08-06_13-55-47.png",
+    "02 SAS/01 Diary/2024/assets/2024-08-05-03.png",
+    "02 SAS/01 Diary/2024/assets/2024-08-05-02.png",
+    "02 SAS/01 Diary/2024/assets/2024-08-05-01.png",
+    "02 SAS/01 Diary/2024/assets/2024-05-10.png",
+    "02 SAS/01 Diary/2024/assets/2024-01-10-001.png",
+    "02 SAS/01 Diary/2024/assets/2024-01-09-001.png",
+    "02 SAS/01 Diary/2024/assets",
+    "02 SAS/01 Diary/2024",
+    "02 SAS/01 Diary/2023/assets/2023-11-07-1.png",
+    "02 SAS/01 Diary/2023/assets/2023-11-03-1.png",
+    "02 SAS/01 Diary/2023/assets/2023-10-25-2.png",
+    "02 SAS/01 Diary/2023/assets",
+    "02 SAS/01 Diary/2023"
+  ]
+}
