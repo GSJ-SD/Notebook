@@ -1,0 +1,7 @@
+{
+  "bundle": "t004_ttest_paired",
+  "source_file": "03 Statistic/02 定量资料/Mean_test.sas",
+  "source_blob_sha": "40d8e4b5375664d04ebf7c74908ddb8b13e8c1a2",
+  "source_commit": "a9ea8c5f8f6841de46192f8dc942b6ee5da5f1fe",
+  "notes": "Second section of Mean_test.sas: paired t-test via PROC TTEST PAIRED (SBPbefore*SBPafter), run twice with different h0/sides/alpha options (the non-inferiority variant) on the author's blood-pressure datalines; both PROC TTEST invocations render identical paired-difference tables."
+}

@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-08-19T15:56:00Z",
+  "_captured_run_id": "r_07d45c83b00146cb87f27be5e7ebbbc7",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: DATA pressure",
+    "NOTE: Read 12 rows from DATALINES.",
+    "NOTE: Wrote pressure (12 rows, 2 columns).",
+    "NOTE: PROC TTEST data=pressure"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
