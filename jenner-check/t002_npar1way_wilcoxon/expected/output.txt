@@ -1,0 +1,67 @@
+                              The NPAR1WAY Procedure                               
+                 Wilcoxon Scores (Rank Sums) for Variable Response                 
+
+Treatment         N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+---------  --------  -------------  -----------------  ----------------  ----------
+Active           27       999.0000           810.0000           63.9700     37.0000
+Placebo          32       771.0000           960.0000           63.9700     24.0900
+
+   Kruskal-Wallis Test   
+
+Statistic           Value
+---------------  --------
+Chi-Square         8.7284
+DF                      1
+Pr > Chi-Square    0.0031
+P Value            0.0031
+
+  Wilcoxon Two-Sample Test  
+
+Statistic              Value
+------------------  --------
+S                   999.0000
+Expected Under H0   810.0000
+Std Dev Under H0     63.9727
+Z                     2.9466
+Two-Sided Pr > |Z|    0.0032
+P Value               0.0032
+
+                              The NPAR1WAY Procedure                               
+        Median Scores (Number of Points Above Median) for Variable Response        
+
+Treatment         N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+---------  --------  -------------  -----------------  ----------------  ----------
+Active           27        21.0000            15.5600            1.9100      0.7800
+Placebo          32        13.0000            18.4400            1.9100      0.4100
+
+Median Test (Brown-Mood) 
+
+Statistic           Value
+---------------  --------
+Chi-Square        10.1024
+DF                      1
+Pr > Chi-Square    0.0015
+Grand Median       3.0000
+
+        Median Test Group Detail        
+
+Treatment         N  > Median  <= Median
+---------  --------  --------  ---------
+Active           27        16         11
+Placebo          32         6         26
+
+   Median Two-Sample Test   
+
+Statistic              Value
+------------------  --------
+Z                     2.8527
+Two-Sided Pr > |Z|    0.0043
+
+                              The NPAR1WAY Procedure                               
+                        Median Scores for Variable Response                        
+
+Treatment         N  Sum of Scores  Expected Under H0  Std Dev Under H0  Mean Score
+---------  --------  -------------  -----------------  ----------------  ----------
+Active           27        21.0000            15.5600            1.9100      0.7800
+Placebo          32        13.0000            18.4400            1.9100      0.4100
+

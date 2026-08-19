@@ -1,0 +1,120 @@
+
+    The ANOVA Procedure     
+  Class Level Information   
+
+Class       Levels  Values  
+--------  --------  --------
+block            3  1 2 3   
+
+Number of Observations Read        21
+Number of Observations Used        21
+
+Dependent Variable: StemLength
+
+Source                  DF  Sum of Squares     Mean Square    F Value     Pr > F
+--------------------------------------------------------------------------------
+block                    2         39.0371         19.5186       2.86     0.0835
+Error                   18        122.8943          6.8275          .          .
+Corrected Total         20        161.9314                          .          .
+
+R-Square: 0.2411  Root MSE: 2.6129  Mean: 32.5571
+
+
+Bonferroni (Dunn) t Tests for StemLength
+
+Alpha                            0.05
+Error Degrees of Freedom         18
+Error Mean Square                6.827460
+
+Level of          -----------block----------
+block                 N         Mean      Std Dev
+
+1.0                   7      34.1429       2.4758
+2.0                   7      32.7143       3.4715
+3.0                   7      30.8143       1.5170
+
+Comparisons significant at the 0.05 level are indicated by ***.
+
+Comparison             Difference      Std Err  Significant
+------------------------------------------------------------
+1.0 - 2.0                  1.4286       1.3967             
+1.0 - 3.0                  3.3286       1.3967             
+2.0 - 3.0                  1.9000       1.3967             
+
+Means with the same letter are not significantly different.
+
+   Lines Group block                    Mean
+----------------------------------------------
+             A 1.0                   34.1429
+             A 2.0                   32.7143
+             A 3.0                   30.8143
+
+
+Student-Newman-Keuls Test for StemLength
+
+Alpha                            0.05
+Error Degrees of Freedom         18
+Error Mean Square                6.827460
+
+Level of          -----------block----------
+block                 N         Mean      Std Dev
+
+1.0                   7      34.1429       2.4758
+2.0                   7      32.7143       3.4715
+3.0                   7      30.8143       1.5170
+
+Comparisons significant at the 0.05 level are indicated by ***.
+
+Comparison             Difference      Std Err  Significant
+------------------------------------------------------------
+1.0 - 2.0                  1.4286       0.9876             
+1.0 - 3.0                  3.3286       0.9876             
+2.0 - 3.0                  1.9000       0.9876             
+
+
+     The GLM Procedure      
+  Class Level Information   
+
+Class       Levels  Values  
+--------  --------  --------
+Block            3  1 2 3   
+
+Number of Observations Read        21
+Number of Observations Used        21
+
+                            The GLM Procedure                             
+                      Dependent Variable: stemlength                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                   2        39.03714     19.51857      2.86    0.0835
+Error                  18       122.89429      6.82746                    
+Corrected Total        20       161.93143                                 
+
+R-Square  Coeff Var  Root MSE  StemLength Mean
+--------  ---------  --------  ---------------
+0.241072    8.02571  2.612941        32.557143
+
+Source          DF  Type I SS  Mean Square   F Value    Pr > F
+--------  --------  ---------  -----------  --------  --------
+Block            2   39.03714     19.51857      2.86    0.0835
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+Block            2     39.03714     19.51857      2.86    0.0835
+
+       Means for Effect: Block        
+
+Level         Mean   Std Dev         N
+--------  --------  --------  --------
+1         34.14286   2.47579         7
+2         32.71429   3.47152         7
+3         30.81429   1.51705         7
+
+Dunnett's Two-sided t Tests for Block (control: 1)
+
+Group     Control   t Statistic  Pr > |t|
+--------  --------  -----------  --------
+2         1             -0.8864    0.3946
+3         1             -3.0330    0.0127
+

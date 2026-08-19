@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_univariate_signrank",
+  "source_file": "03 Statistic/03 等级资料/Rate_test.sas",
+  "source_blob_sha": "c163d8f44251978298bae73ea2f1a7458897b196",
+  "source_commit": "a9ea8c5f8f6841de46192f8dc942b6ee5da5f1fe",
+  "notes": "First section of Rate_test.sas: one-sample Wilcoxon signed-rank test via PROC UNIVARIATE (mu0=3, CIQUANTDF) on the author's inline before/after training-score datalines; verified the Signed Rank / Sign / Student's t location tests all render, matching the note's stated purpose."
+}

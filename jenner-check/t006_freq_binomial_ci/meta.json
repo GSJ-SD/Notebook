@@ -1,0 +1,7 @@
+{
+  "bundle": "t006_freq_binomial_ci",
+  "source_file": "03 Statistic/01 定性资料/01 基础知识/Proportion_test.sas",
+  "source_blob_sha": "00146bae47fcb3f483684e3e55becbb9177f278a",
+  "source_commit": "a9ea8c5f8f6841de46192f8dc942b6ee5da5f1fe",
+  "notes": "First two sections of Proportion_test.sas: single-group binomial proportion CI via PROC FREQ TABLES/BINOMIAL (cl=wald exact), one testing a plain 50% proportion and one testing against a target p=0.45, on the author's Chinese-character level (阴性/阳性-style) datalines; verified Wald and Exact CI rows and the H0 test line render for both."
+}

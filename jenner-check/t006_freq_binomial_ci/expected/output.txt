@@ -1,0 +1,30 @@
+                                                   The FREQ Procedure
+
+                                    Cumulative    Cumulative
+aval      Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------
+无效               45     45.00           45        45.00
+有效               55     55.00          100       100.00
+
+Binomial Proportion for 有效
+
+Proportion                           0.5500
+ASE                                  0.0497
+Test of H0: Proportion = 0.50        0.3173
+95% Wald Conf Limits         0.4525 0.6475
+95% Exact Conf Limits        0.4473 0.6497
+                                                   The FREQ Procedure
+
+                                       Cumulative    Cumulative
+aval         Frequency    Percent     Frequency      Percent
+------------------------------------------------------------------
+未治愈                 63     35.00           63        35.00
+治愈                 117     65.00          180       100.00
+
+Binomial Proportion for 治愈
+
+Proportion                           0.6500
+ASE                                  0.0356
+Test of H0: Proportion = 0.45        0.0000
+95% Wald Conf Limits         0.5803 0.7197
+95% Exact Conf Limits        0.5755 0.7195

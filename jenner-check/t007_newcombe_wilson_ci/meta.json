@@ -1,0 +1,7 @@
+{
+  "bundle": "t007_newcombe_wilson_ci",
+  "source_file": "03 Statistic/01 定性资料/02 率差的置信区间计算/Newcombe_wilson.sas",
+  "source_blob_sha": "a19d307acc531bae6b01fdc8d408bfdaa4d29417",
+  "source_commit": "a9ea8c5f8f6841de46192f8dc942b6ee5da5f1fe",
+  "notes": "Second (non-0%/100%) section of Newcombe_wilson.sas: the author's own hand-rolled Newcombe-Wilson risk-difference CI formula (PROBIT + manual Wilson bounds in a DATA step chain) cross-checked against PROC FREQ BINOMIAL(cl=wilson) and TABLES riskdiff(cl=newcombe) on the trial-arm event datalines. Added one PROC PRINT (not in the original, which only builds _newcombeCI without printing it) so the manually computed d/L/U are visible in the listing; everything else is unmodified."
+}

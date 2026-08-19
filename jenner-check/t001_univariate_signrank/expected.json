@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-08-19T15:50:00Z",
+  "_captured_run_id": "r_0aa9dc8947f24b18beb901907aa4e3bf",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: DATA training",
+    "NOTE: Read 15 rows from DATALINES.",
+    "NOTE: Wrote training (15 rows, 3 columns).",
+    "NOTE: PROC UNIVARIATE"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

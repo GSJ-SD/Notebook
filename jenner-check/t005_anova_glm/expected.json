@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-08-19T15:58:00Z",
+  "_captured_run_id": "r_4b1e1d1ce7654bf19822258654530cbe",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: DATA plants",
+    "NOTE: Wrote plants (21 rows, 3 columns).",
+    "NOTE: PROC ANOVA data=plants",
+    "NOTE: PROC GLM data=plants"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}

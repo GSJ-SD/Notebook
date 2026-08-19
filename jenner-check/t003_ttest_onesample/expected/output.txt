@@ -1,0 +1,17 @@
+                   The TTEST Procedure                    
+                     Variable:  score                     
+
+       N      Mean   Std Dev   Std Err   Minimum   Maximum
+--------  --------  --------  --------  --------  --------
+      44   34.8636   11.2303    1.6930   14.0000   54.0000
+
+Lower CL Mean      Mean  Upper CL Mean  Lower CL Std Dev   Std Dev  Upper CL Std Dev
+-------------  --------  -------------  ----------------  --------  ----------------
+      31.4493   34.8636        38.2780            9.2788   11.2303           14.2291
+
+      H0: Mean = 30.0       
+
+      DF   t Value  Pr > |t|
+--------  --------  --------
+      43      2.87    0.0063
+

@@ -1,0 +1,7 @@
+{
+  "bundle": "t003_ttest_onesample",
+  "source_file": "03 Statistic/02 定量资料/Mean_test.sas",
+  "source_blob_sha": "40d8e4b5375664d04ebf7c74908ddb8b13e8c1a2",
+  "source_commit": "a9ea8c5f8f6841de46192f8dc942b6ee5da5f1fe",
+  "notes": "First section of Mean_test.sas: one-sample t-test via PROC TTEST (h0=30) with a FREQ-weighted score/count datalines table; verified N correctly expands to 44 via FREQ and the H0: Mean=30.0 test row renders."
+}

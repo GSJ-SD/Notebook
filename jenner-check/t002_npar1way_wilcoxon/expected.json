@@ -1,0 +1,14 @@
+{
+  "_captured_at": "2026-08-19T15:52:00Z",
+  "_captured_run_id": "r_b8e946bfc87a4830ae84220f3525260c",
+  "status": "ok",
+  "exit_code": 0,
+  "log_contains": [
+    "NOTE: DATA Arthritis",
+    "NOTE: Read 10 rows from DATALINES.",
+    "NOTE: Wrote Arthritis (10 rows, 3 columns).",
+    "NOTE: PROC NPAR1WAY data=Arthritis"
+  ],
+  "log_does_not_contain": ["ERROR:", "[JENNER-ERROR"],
+  "diagnostics": {"parse_warnings": [], "runtime_warnings": []}
+}
